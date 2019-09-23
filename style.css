@@ -281,7 +281,7 @@ footer::after {
   display: block;
   clear: both;
 }
-copy {
+.copy {
   background: #f5f5f5;
   text-align: center;
   color: #6a7481;
