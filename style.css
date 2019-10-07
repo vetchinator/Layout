@@ -8,7 +8,7 @@ body {
 }
 .container {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 100%;
 }
 header {
   width: 80%;
@@ -115,6 +115,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.32px;
+  width: 120px;
 }
 .advantages {
   display: grid;
@@ -380,6 +381,227 @@ header {
   z-index: 1;
 }
 .gallery {
+  padding: 111px 12% 60px 10%;
   background-image: url(img/gallery/gallery-backg.png);
+  background-color: aqua;
   text-align: center;
+}
+.header-gallery {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+}
+.text-gallery {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.gallery-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 38px;
+}
+@media (max-width: 1388px) and (min-width: 900px) {
+  .gallery-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .gallery-group {
+    padding: 111px 5% 60px 7%;
+    grid-template-columns: 1fr;
+  }
+}
+.our-team {
+  text-align: center;
+  padding: 111px 12% 60px 10%;
+}
+.our-team-header {
+  color: #494949;
+  font-size: 45px;
+  font-weight: 700;
+}
+.our-team-text {
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.doctors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 29px;
+}
+@media (max-width: 1543px) and (min-width: 801px) {
+  .doctors {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+}
+@media (max-width: 900px) {
+  .our-team {
+    padding: 111px 5% 60px 7%;
+  }
+  .doctors {
+    grid-template-columns: 1fr;
+  }
+}
+.doctor-name {
+  color: #6f6f6e;
+  font-size: 25px;
+  font-weight: 500;
+}
+.doctor-position {
+  color: #6f6f6e;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1.09px;
+  padding: 11px;
+}
+.social a img {
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+}
+.offer {
+  padding: 80px 12% 65px 10%;
+  background-color: #e2e2e2;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+.offer .button {
+  display: inline-table;
+}
+@media (max-width: 600px) {
+  .offer {
+    display: block;
+    text-align: center;
+  }
+}
+.offer-header {
+  color: #494949;
+  font-size: 30px;
+  font-weight: 700;
+}
+footer {
+  background-color: #171717;
+  padding: 111px 12% 60px 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.55px;
+  padding-bottom: 70px;
+}
+@media (max-width: 1100px) and (min-width: 751px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+  .contacts {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+@media (max-width: 750px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding-left: calc(50% - 136px);
+  }
+}
+.get-touch-unit {
+  clear: both;
+  padding-bottom: 40px;
+}
+.get-touch-unit img {
+  float: left;
+  padding-right: 30px;
+}
+.get-touch-unit p {
+  opacity: 0.51;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4p;
+}
+.get-touch-unit .touch-number {
+  padding-right: 41px;
+}
+.footer-social img {
+  float: left;
+  padding-right: 15px;
+  width: 32px;
+  height: 32px;
+}
+.footer-menu a {
+  text-decoration: none;
+  opacity: 0.51;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.footer-menu a li {
+  list-style-type: none;
+  background-image: url(img/footer/play-arrow.svg);
+  background-size: 11px;
+  background-position: -3px 3px;
+  background-repeat: no-repeat;
+  padding-left: 22px;
+  padding-bottom: 24px;
+}
+.contacts input[type='text'] {
+  background-color: #171717;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 30px;
+  color: white;
+}
+.contacts input[type='submit'] {
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  padding: 12px 36px;
+  background-color: #0087be;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.contacts-list {
+  list-style-type: none;
+}
+.contacts-list li:not(:first-child) {
+  margin-top: 10px;
+}
+.contacts input::placeholder {
+  opacity: 0.51;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.copy {
+  text-align: center;
+  background-color: #1a1a1a;
+}
+.copy p {
+  padding: 55px 0px;
+  color: #615555;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.33px;
 }
