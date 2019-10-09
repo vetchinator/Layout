@@ -4,6 +4,12 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -124,6 +130,7 @@ header {
 
 .button {
     text-decoration: none;
+    font-family: 'Lato', sans-serif;
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
     background-color: #1a9bdc;
     border-radius: 36px;
@@ -427,6 +434,7 @@ header {
     font-weight: 500;
     letter-spacing: -1.21px;
     padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .review-date {
@@ -436,6 +444,7 @@ header {
     letter-spacing: -0.38px;
     padding-bottom: 20px;
     padding-top: 13px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .work .button {
@@ -507,24 +516,41 @@ header {
     padding-top: 50px;
 }
 
-.gallery-unit{
-    position:relative;   
-
+.gallery-unit {
+    position: relative;
+    perspective: 1000px;
 }
-.photo-gallery-back{
-    position:absolute;
-    left:0;
-    bottom:0;
-    right:0;
-    top:0;
-    display:none;
+.gal-img {
+    transition-duration: 2s;
 }
 
-.gallery-unit:hover .photo-gallery-back{
-    display:block;
+.gal-img, .photo-gallery-back {
+    transition-duration: 1s;
+    backface-visibility: hidden;
 }
 
-Resources @media (max-width:1388px) and (min-width:900px) {
+.photo-gallery-back {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    transform: rotateY(180deg);
+}
+
+.gallery-unit:hover {
+    .photo-gallery-back {
+        width: 344px;
+        margin: 0 auto;
+        background-color: cornflowerblue;
+        transform: rotateY(360deg);
+    }
+    .gal-img {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (max-width:1388px) and (min-width:900px) {
     .gallery-group {
         grid-template-columns: 1fr 1fr;
     }
